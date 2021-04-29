@@ -18,6 +18,7 @@ function onTick(){
     char++;
     if(char == array.length){
       document.querySelector('.home').classList.add('fade2');
+      document.querySelector('.todo').classList.add('fade3');
       clearInterval(timer);
       timer = null;
     }
