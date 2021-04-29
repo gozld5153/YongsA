@@ -136,3 +136,17 @@ select {
   background: white;
   color: #ff6f47;
 }
+
+.container {
+  min-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 769px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
