@@ -43,6 +43,3 @@ window.addEventListener('load', ()=>{
 
 });
 
-
-
-//https://api.openweathermap.org/data/2.5/weather?lat=35.140&lon=126.890&appid=322ee858bb4f985316e29e4f5561d18e

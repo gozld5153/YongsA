@@ -527,7 +527,7 @@
         this.resizeClear = !!(opts && opts.resizeClear);
       };
 
-  Skycons.CLEAR_DAY = function(ctx, t, color) {
+  Skycons.CLEAR = function(ctx, t, color) {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         s = Math.min(w, h);
@@ -578,7 +578,7 @@
     cloud(ctx, t, w * 0.5, h * 0.37, s * 0.9, s * STROKE, color);
   };
 
-  Skycons.SLEET = function(ctx, t, color) {
+  Skycons.DRIZZLE = function(ctx, t, color) {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         s = Math.min(w, h);
@@ -596,7 +596,7 @@
     cloud(ctx, t, w * 0.5, h * 0.37, s * 0.9, s * STROKE, color);
   };
 
-  Skycons.WIND = function(ctx, t, color) {
+  Skycons.THUNDERSTORM = function(ctx, t, color) {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         s = Math.min(w, h);
