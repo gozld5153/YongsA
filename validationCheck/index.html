@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유효성 검사</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validator.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gugi&family=Jua&display=swap');
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class='roboEye'>
+      <div class='roboEyeLeft'></div>
+      <div class="topTitle">회 원 가 입</div>
+      <div class='roboEyeRight'></div> 
+    </div>
+
+    <input type="text" id="username" placeholder="아이디를 입력하세요.">
+
+    <div class="idBox">
+      <div class="success-message hide fontB color-green">사용할 수 있는 아이디입니다.</div>
+      <div class="failure-message hide fontB color-red">4~10자의 영문자, 숫자만 사용가능합니다.</div>
+    </div>
+    
+    <input type="password" id="password" placeholder="비밀번호를 입력하세요.">
+
+    <div>
+      <div class="strong-password hide fontB color-red">비밀번호는 문자,숫자,특수문자가 포함된 8글자 이상이어야 합니다.</div>
+    </div>
+    
+    <div id="roboMouth">
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+      <div class="roboTeeth"></div>
+    </div>
+
+    <input type="password" id="password-retype" class="hide" placeholder="비밀번호를 재입력하세요.">
+
+    <div>
+      <div class="match-message hide fontB color-green">비밀번호가 일치합니다.</div>
+      <div class="mismatch-message hide fontB color-red">비밀번호가 일치하지 않습니다.</div>
+    </div>
+
+    <button class="join hide">회원가입</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

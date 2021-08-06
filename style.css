@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100%;
+  width: 100vh;
   height: 100vh;
   background-color: black;
 }
@@ -25,7 +25,10 @@ h1 {
 }
 
 .linkContainer {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
+  width: 80%;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -37,6 +40,10 @@ h1 {
   font-size: 2em;
   opacity: 0;
   transition: all 1s ease;
+}
+
+.robo {
+  font-size: 2rem;
 }
 
 .linkContainer a {
