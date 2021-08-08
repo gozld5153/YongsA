@@ -35,8 +35,8 @@ body{
 
 .roboEyeLeft, .roboEyeRight {
   background-color: #FFC947;
-  width: 8%;
-  height: 50%;
+  width: 10%;
+  height: 60%;
   border-radius: 50%;
 }
 
@@ -68,11 +68,20 @@ input{
   border-radius: 0.5rem;
   background-color: #d3d3d3;
   font-weight: bold;
+  border: 0;
 }
 
 input:focus {
   background-color: #efefef;
-  border-color: chartreuse;
+  /* outline: none; */
+}
+
+.borderGreen {
+    border: 0.2rem solid yellowgreen;
+}
+
+.borderRed {
+  border: 0.2rem solid #FF4848;
 }
 
 ::placeholder {
@@ -105,6 +114,9 @@ button {
   font-weight: bold;
   color: #0A1931;
   box-shadow: 0.5rem 5px 5px black;
+  font-family: 'Jua', sans-serif;
+  border: 0;
+
 }
 
 
@@ -126,11 +138,11 @@ button:focus {
     opacity: 1;
   } to {
     opacity: 0;
-    transform: translate(0, 10px); 
+    transform: translate(0, 20px); 
   }
 }
 
-.aniBox2 {
+/* .aniBox2 {
   animation: disapear2 3s;
   animation-fill-mode: forwards;
 }
@@ -140,7 +152,7 @@ button:focus {
     opacity: 1;
   } to {
     opacity: 0;
-    transform: rotate(-100deg) translate(0, 50px); 
+    transform: rotate(90deg) translate(150px, 50px); 
   }
 }
 
@@ -154,9 +166,9 @@ button:focus {
     opacity: 1;
   } to {
     opacity: 0;
-    transform: rotate(50deg) translate(0, 50px); 
+    transform: translate(0, 70px); 
   }
-}
+} */
 
 .lastMent {
   font-size: 4rem;
@@ -174,7 +186,7 @@ button:focus {
 }
 
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 1680px) {
   #container {
     background-color: #EFEFEF;
     box-shadow: 0 0 0 0 black;
@@ -189,6 +201,9 @@ button:focus {
   }
   .roboEyeLeft, .roboEyeRight {
     background-color: #efefef;
+  }
+  #roboMouth {
+    display: none;
   }
 }
 
@@ -206,5 +221,8 @@ button:focus {
   }
   .roboEyeLeft, .roboEyeRight {
     background-color: #efefef;
+  }
+  #roboMouth{
+    display: none;
   }
 }

@@ -26,10 +26,14 @@ function isMoreThan4Length(value) {
   if(value && /^[A-Za-z0-9][A-Za-z0-9]{3,9}$/.test(userName.value)){
     successMessage.classList.remove('hide')
     failurMessage.classList.add('hide')
+    userName.classList.remove('borderRed')
+    userName.classList.add('borderGreen') 
     checkId = true;
     hideJoin();
   }
-  else {
+  else {  
+    userName.classList.remove('borderGreen')
+    userName.classList.add('borderRed')
     failurMessage.classList.remove('hide')
     successMessage.classList.add('hide')
     checkId = false;
@@ -37,15 +41,25 @@ function isMoreThan4Length(value) {
   }
 }
 
+
 let teethColor = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']
-let rainbow = 0;
+let saveNum = 0;
 password1.onkeyup = function(){
   if(!(strongPassword(password1.value))){
     strongPwd.classList.remove('hide');
-    roboTeeth[rainbow].style.backgroundColor = teethColor[rainbow]
-    rainbow++;
-    if(rainbow === teethColor.length){
-      rainbow = 0;
+    password1.classList.add('borderRed')
+    password1.classList.remove('borderGreen') 
+    //password1의 값의 길이가 3이면 3칸만 칠해지고 1칸을 지우고 2칸
+    if(saveNum === password1.value.length){
+      roboTeeth[saveNum].style.backgroundColor = '#efefef'
+    }
+
+    for(let i = 0; i < password1.value.length; i++){
+      if(password1.value.length >= 8){
+        break;
+      }
+      roboTeeth[i].style.backgroundColor = teethColor[i]
+      saveNum = i;
     }
   }
   else {
@@ -54,6 +68,8 @@ password1.onkeyup = function(){
     // for(let el of roboTeeth){
     //   el.classList.add('hide')
     // }
+    password1.classList.remove('borderRed')
+    password1.classList.add('borderGreen') 
     strongPwd.classList.add('hide');
     password2.classList.remove('hide');
   }
@@ -64,16 +80,20 @@ password2.onkeyup = function() {
 }
 
 
-function isMatch (password1, password2) {
+function isMatch (password1, passwordpara) {
   // TODO : 동영상 강의를 보고 이 함수를 완성하세요.
-  if(password1 === password2 && password1.length > 0){
+  if(password1 === passwordpara && password1.length > 0){
     matchMessage.classList.remove('hide')
     mismatchMessage.classList.add('hide')
+    password2.classList.add('borderGreen') 
+    password2.classList.remove('borderRed')
     checkPw = true;
     hideJoin();
     return true;
   }
   else {
+    password2.classList.remove('borderGreen') 
+    password2.classList.add('borderRed')
     matchMessage.classList.add('hide')
     mismatchMessage.classList.remove('hide')
     checkPw = false;
@@ -93,13 +113,18 @@ function hideJoin(){
 
 joinBtn.addEventListener('click', () => {
   container.classList.add('aniBox')
-  joinBtn.classList.add('aniBox2')
+  joinBtn.classList.add('aniBox')
+  userName.classList.add('aniBox')
   password1.classList.add('aniBox')
-  password2.classList.add('aniBox3')
+  password2.classList.add('aniBox')
 
   if(checkMore === true){
-    setTimeout(makeDiv, 3000)
+    setTimeout(makeDiv, 3300)
     function makeDiv(){
+      container.classList.add('hide')
+      joinBtn.classList.add('hide')
+      password1.classList.add('hide')
+      password2.classList.add('hide')
       let div = document.createElement('div')
       document.body.prepend(div);
       div.textContent = "가입을 축하합니다!"
@@ -109,6 +134,7 @@ joinBtn.addEventListener('click', () => {
     }
   }
 })
+
 
 let colors = ['red', 'blue', 'green', 'pink'];
 let count = 0;
