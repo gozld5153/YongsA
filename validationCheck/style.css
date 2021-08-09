@@ -77,11 +77,13 @@ input:focus {
 }
 
 .borderGreen {
-    border: 0.2rem solid yellowgreen;
+  border: 0.2rem solid yellowgreen;
+  outline: none;
 }
 
 .borderRed {
   border: 0.2rem solid #FF4848;
+  outline: none;
 }
 
 ::placeholder {
@@ -188,7 +190,7 @@ button:focus {
 
 @media screen and (max-width: 1680px) {
   #container {
-    background-color: #EFEFEF;
+    background-color: #5a5151;
     box-shadow: 0 0 0 0 black;
   }
   
